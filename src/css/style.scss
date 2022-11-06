@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
 
 $softRed: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
@@ -56,7 +56,7 @@ $white: hsl(0, 0%, 100%);
 }
 
 .navbar-modal::before {
-    content:"";
+    content: "";
     border-style: solid;
     border-width: 25px 24px 0 0;
     border-color: transparent $white transparent transparent;
@@ -157,6 +157,7 @@ $white: hsl(0, 0%, 100%);
     color: $veryDarkDesaturatedBlue;
     font-weight: 900;
     letter-spacing: 1px;
+    cursor: pointer;
 }
 
 .egg-learn-more::after {
@@ -167,6 +168,7 @@ $white: hsl(0, 0%, 100%);
     height: 5px;
     background-color: $yellow;
     opacity: 0.4;
+    transition: background-color 0.5s;
 }
 
 .stand-out {
@@ -187,7 +189,8 @@ $white: hsl(0, 0%, 100%);
     background-image: url("/src/images/mobile/image-photography.jpg");
 }
 
-.graphic-design, .photography {
+.graphic-design,
+.photography {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,21 +207,25 @@ $white: hsl(0, 0%, 100%);
     transform: translate(-50%, -87%);
 }
 
-.internal-title, .internal-paragraph {
+.internal-title,
+.internal-paragraph {
     color: $darkDesaturatedCyan;
 }
 
-.second-internal-title, .second-internal-paragraph {
+.second-internal-title,
+.second-internal-paragraph {
     color: $darkBlue;
 }
 
-.internal-title, .second-internal-title {
+.internal-title,
+.second-internal-title {
     font-size: 28px;
     font-family: "Fraunces", sans-serif;
     font-weight: 900;
 }
 
-.internal-paragraph, .second-internal-paragraph {
+.internal-paragraph,
+.second-internal-paragraph {
     font-family: "Barlow", sans-serif;
     margin-top: 1.65rem;
     padding: 0 1rem;
@@ -368,4 +375,191 @@ $white: hsl(0, 0%, 100%);
 .icon[alt="twitter"] {
     width: 20px;
     height: 17px;
+}
+
+.mobile {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar-modal {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .header {
+        height: 800px;
+        background-image: url("/src/images/desktop/image-header.jpg");
+        padding: 2rem 3rem;
+    }
+
+    .navbar {
+        margin-top: 0.1rem;
+    }
+
+    .sunnyside-logo {
+        transform: scale(1.35);
+        margin-left: 1rem;
+        margin-top: 0.1rem;
+    }
+
+    .navbar-desktop-links {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-about,
+    .nav-services,
+    .nav-projects {
+        margin-right: 3rem;
+        color: $white;
+        font-family: "Barlow", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .nav-projects {
+        margin-right: 3rem;
+    }
+
+    .nav-contact {
+        padding: 1.15rem 2rem;
+        background-color: $white;
+        border-radius: 2rem;
+        font-size: 15px;
+        color: $darkDesaturatedCyan;
+        font-family: "Fraunces", sans-serif;
+        transition: color 0.5s, background-color 0.5s;
+        cursor: pointer;
+    }
+
+    .nav-contact:hover {
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .intro {
+        top: 36.5%;
+        transform: translate(-50%, -36.5%);
+    }
+
+    .we-are-creative {
+        font-size: 55px;
+        letter-spacing: 11px;
+        margin-bottom: 4.75rem;
+    }
+
+    .first-grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .content-under-egg.second-item {
+        padding: 9.75rem 7rem 0 10.5rem;
+    }
+
+    .content-under-egg.fourth-item {
+        padding: 9.75rem 5rem 0 7rem;
+    }
+
+    .fourth-item .egg-paragraph {
+        padding-right: 5rem;
+    }
+
+    .second-item .egg-learn-more {
+        left: 10.5rem;
+        transform: translateX(0);
+        margin-left: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .fourth-item .egg-learn-more {
+        left: 7rem;
+        transform: translateX(0);
+        margin-left: 0.5rem;
+        padding-top: 0.5rem;
+    }
+
+    .content-under-egg {
+        position: relative;
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .egg-title {
+        padding: 0;
+        padding-right: 5rem;
+        font-size: 40.5px;
+    }
+
+    .egg-paragraph {
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .egg-learn-more:hover::after {
+        background-color: $softRed;
+    }
+
+    .second-item {
+        order: 1;
+    }
+
+    .image-transform,
+    .stand-out {
+        height: 600px;
+    }
+
+    .stand-out, .graphic-design {
+        margin-top: 0;
+    }
+
+    .image-transform {
+        order: 2;
+        background-image: url("/src/images/desktop/image-transform.jpg");
+    }
+
+    .stand-out {
+        order: 3;
+        background-image: url("/src/images/desktop/image-stand-out.jpg");
+    }
+
+    .fourth-item {
+        order: 4;
+    }
+
+    .graphic-design {
+        order: 5;
+        background-image: url("/src/images/desktop/image-graphic-design.jpg");
+    }
+
+    .photography {
+        order: 6;
+        background-image: url("/src/images/desktop/image-photography.jpg");
+    }
+
+    .internal-paragraph {
+        padding: 0 12rem;
+        margin-bottom: 0.1rem;
+        margin-top: 1.75rem;
+    }
+
+    .second-internal-paragraph {
+        padding: 0 12rem;
+    }
+
+    .second-internal-title {
+        margin-left: 1rem;
+    }
 }

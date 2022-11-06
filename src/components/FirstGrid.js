@@ -4,13 +4,13 @@ const FirstGrid = () => {
   return (
     <div className='first-grid'>
         <div className='image-transform'></div>
-        <div className='content-under-egg'>
+        <div className='content-under-egg second-item'>
             <h1 className='egg-title'>Transform your brand</h1>
             <p className='egg-paragraph'>We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
             <p className='egg-learn-more'>LEARN MORE</p>
         </div>
         <div className='stand-out'></div>
-        <div className='content-under-egg'>
+        <div className='content-under-egg fourth-item'>
             <h1 className='egg-title'>Stand out to the right audience</h1>
             <p className='egg-paragraph'>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build an extend your brand in digital places.</p>
             <p className='egg-learn-more'>LEARN MORE</p>
