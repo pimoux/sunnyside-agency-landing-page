@@ -30,13 +30,15 @@ const Testimonials = () => {
     return (
         <div className='testimonials'>
             <h1 className='testimonials-title'>CLIENT TESTIMONIALS</h1>
-            {data.map(elt => <Feedback 
-                key={elt.fullname}
-                image={elt.image} 
-                comment={elt.comment} 
-                fullname={elt.fullname} 
-                job={elt.job} 
-            />)};
+            <div className="advices">
+                {data.map(elt => <Feedback 
+                    key={elt.fullname}
+                    image={elt.image} 
+                    comment={elt.comment} 
+                    fullname={elt.fullname} 
+                    job={elt.job} 
+                />)}
+            </div>
         </div>
     )
 }
