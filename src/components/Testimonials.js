@@ -31,7 +31,8 @@ const Testimonials = () => {
         <div className='testimonials'>
             <h1 className='testimonials-title'>CLIENT TESTIMONIALS</h1>
             <div className="advices">
-                {data.map(elt => <Feedback 
+                {data.map((elt, i) => <Feedback 
+                    id={`feedback-${i + 1}`}
                     key={elt.fullname}
                     image={elt.image} 
                     comment={elt.comment} 

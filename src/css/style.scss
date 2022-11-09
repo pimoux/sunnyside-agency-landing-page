@@ -18,6 +18,10 @@ $white: hsl(0, 0%, 100%);
     padding: 0;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 #main {
     width: 100%;
     min-height: 100vh;
@@ -95,6 +99,7 @@ $white: hsl(0, 0%, 100%);
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    opacity: 0;
 }
 
 .we-are-creative {
@@ -204,7 +209,7 @@ $white: hsl(0, 0%, 100%);
     position: absolute;
     top: 87%;
     left: 50%;
-    transform: translate(-50%, -87%);
+    transform: translate(-50%, calc(-87% + 50px));
 }
 
 .internal-title,
@@ -383,6 +388,31 @@ $white: hsl(0, 0%, 100%);
 
 .desktop {
     display: none;
+}
+
+//GSAP
+
+.second-item {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.fourth-item {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.stand-out, .image-transform {
+    filter: blur(20px);
+}
+
+.internal-content {
+    opacity: 0;
+}
+
+.feedback {
+    transform: translateY(100px);
+    opacity: 0;
 }
 
 @media screen and (min-width: 1440px) {
